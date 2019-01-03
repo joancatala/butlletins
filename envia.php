@@ -78,8 +78,8 @@ $cabeceras .= 'Content-type: text/html;charset=UTF-8' . "\r\n";
 $to      = $variable_para;
 $subject = '[BOLETIN] ' . $variable_titol;
 
-$cabeceras .= 'From: privacidadyseguridad@dipcas.es' . "\r\n" .
-    'Reply-To: privacidadyseguridad@dipcas.es' . "\r\n" .
+$cabeceras .= 'From: EL_TEU_CORREU_DEL_FROM@dipcas.es' . "\r\n" .
+    'Reply-To: EL_TEU_CORREU_DE_RESPOSTA@dipcas.es' . "\r\n" .
 				'Cc: ' . $variable_copia . "\r\n";
     'X-Mailer: PHP/' . phpversion();
 
