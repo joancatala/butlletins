@@ -96,12 +96,5 @@ function doscolumnas_exclusivo() {
 	</div>
 	<img id="bottom" src="bottom.png" alt="">
 
-
-<!-- JAVASCRIPT -->  
-
-<script src="js/jquery-1.js"></script> 
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery-ui.js"></script>
-
 	</body>
 </html>
