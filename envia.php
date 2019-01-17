@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 // ---------------------------------------------------------------------------------------------
 // Anem a recollir les variables i a preparar-les
 // ---------------------------------------------------------------------------------------------
@@ -11,28 +12,28 @@ $variable_mensajecampo3 = $_POST["element_6"];
 
 // Anem a convertir els espais del textarea a <br /> 
 if (isset($variable_mensajecampo1)) {
-$variable_mensajecampo1 = ereg_replace("\n", "<br>", $variable_mensajecampo1);
-$variable_mensajecampo1 = ereg_replace("\r", "", $variable_mensajecampo1);
+$variable_mensajecampo1 = str_replace("\n", "<br />", $variable_mensajecampo1);
+$variable_mensajecampo1 = str_replace("\r", "", $variable_mensajecampo1);
 }
 
 // Anem a convertir els espais del textarea 2 (esquerra de les dos columnes) a <br /> 
 if (isset($variable_mensajecampo2)) {
-$variable_mensajecampo2 = ereg_replace("\n", "<br>", $variable_mensajecampo2);
-$variable_mensajecampo2 = ereg_replace("\r", "", $variable_mensajecampo2);
+$variable_mensajecampo2 = str_replace("\n", "<br />", $variable_mensajecampo2);
+$variable_mensajecampo2 = str_replace("\r", "", $variable_mensajecampo2);
 }
 
 // Anem a convertir els espais del textarea 3 (dreta de les dos columnes) a <br /> 
 if (isset($variable_mensajecampo3)) {
-$variable_mensajecampo3 = ereg_replace("\n", "<br>", $variable_mensajecampo3);
-$variable_mensajecampo3 = ereg_replace("\r", "", $variable_mensajecampo3);
+$variable_mensajecampo3 = str_replace("\n", "<br />", $variable_mensajecampo3);
+$variable_mensajecampo3 = str_replace("\r", "", $variable_mensajecampo3);
 }
 
 // ---------------------------------------------------------------------------------------------
 // Preparem la maquetacio de l'HTML del butlleti i ho enmagatzenem tot a la variable '$message'
 // ---------------------------------------------------------------------------------------------
-$message = '<html lang=\"en\"><head>'.
-           '<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">'.
-           '<meta charset=\"UTF-8\">'.
+$message = '<html lang="es"><head>'.
+           //'<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">'.
+           '<meta charset="utf-8">'.
            '<meta http-equiv="X-UA-Compatible" content="IE=edge">'.
            '<meta name="viewport" content="width=device-width, initial-scale=1">'.
 										 '<style>'.
@@ -48,17 +49,17 @@ $message = '<html lang=\"en\"><head>'.
 																	'img.icon_social {margin: 15px 10px 0 0; width: 30px; height: 30;}'.
 											'</style>'.
            '</head>'.
-           '<body><table class="taula"><td>   '.
-           '<img class="" src="http://sepam.dipcas.es/files/boletin-logodipcas.png" />&nbsp;&nbsp;&nbsp;'.
-											'<img class="fluida" src="http://sepam.dipcas.es/files/boletin-cabecera.png" />'.
+           '<body><table class="taula"><td>'.
+											'<img class="" style="" src="http://sepam.dipcas.es/dipcas.png" />'.
+											'<img class="fluida" src="https://sepam.dipcas.es/newsletters.jpg">'.
            '<div class="subtitolet">Oficina Provincial de Protección de Datos y Seguridad</div><br />'.
-           '<h1>'.  utf8_encode($variable_titol) . '</h1></td></table>';
+           '<h1>'.  $variable_titol . '</h1></td></table>';
 
 											if (empty($variable_mensajecampo2)) {
-														$message .= '<table class="taula"><td><div class="mensaje">' . utf8_encode($variable_mensajecampo1) . '</div></td></table>';
+														$message .= '<table class="taula"><td><div class="mensaje" style="text-align:justify;">' . $variable_mensajecampo1 . '</div></td></table>';
 											} else {
-														$message .= '<table class="taula"><td class="doscolumnes">' . utf8_encode($variable_mensajecampo2) . '</td>';
-														$message .= '<td class="doscolumnes">' . utf8_encode($variable_mensajecampo3) . '<!-- row --></td></table>';
+														$message .= '<table class="taula"><td class="doscolumnes" style="text-align:justify;">' . $variable_mensajecampo2 . '</td>';
+														$message .= '<td class="doscolumnes" style="text-align:justify;">' . $variable_mensajecampo3 . '</td></table>';
 											}
 
 $message .= '<table class="taula-esquerra"><td>Más información en <a href="#">Privacidad y Seguridad de Diputación de Castellón</a>.<br />
@@ -69,17 +70,16 @@ $message .= '<a href="https://www.facebook.com/dipcas"><img class="icon_social" 
 													<a href="https://www.flickr.com/photos/diputacion/"><img class="icon_social" src="http://sepam.dipcas.es/files/boletin-flickr.png" /></a></td></table>';
 $message .= '</div></body></html>';
 
-$cabeceras = 'MIME-Version: 1.0' . "\r\n";
-$cabeceras .= 'Content-type: text/html;charset=UTF-8' . "\r\n";
-
 // ---------------------------------------------------------------------------------------------
 // Fem l'enviament del Butlletí
 // ---------------------------------------------------------------------------------------------
 $to      = $variable_para;
 $subject = '[BOLETIN] ' . $variable_titol;
 
-$cabeceras .= 'From: EL_TEU_CORREU_DEL_FROM@dipcas.es' . "\r\n" .
-    'Reply-To: EL_TEU_CORREU_DE_RESPOSTA@dipcas.es' . "\r\n" .
+$cabeceras = 'MIME-Version: 1.0' . "\r\n";
+$cabeceras .= 'Content-type: text/html;charset=utf-8' . "\r\n";
+$cabeceras .= 'From: privacidadyseguridad@dipcas.es' . "\r\n" .
+    'Reply-To: privacidadyseguridad@dipcas.es' . "\r\n" .
 				'Cc: ' . $variable_copia . "\r\n";
     'X-Mailer: PHP/' . phpversion();
 
