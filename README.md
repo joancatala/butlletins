@@ -1,15 +1,20 @@
-# butlletins
+# butlletins Newsletters Senzills
 
-Aquesta aplicacioneta ha segut desenvolupada en PHP en unes 10 hores de canvis i modificacions. Em serveix per a enviar butlletins informatius elegants amb HTML i un CSS incrustat als correus, de tal manera que l'usuari reb un correu xulo i usable i atractiu.
+Continuant amb l'aplicació web de Newsletters Senzills, que ja vaig comentar ací a la meua web quan vaig fer la versió 1.0, ara ja es pot presentar la versió 1.2, on té un disseny millorat (100% responsive + HTML5 + CSS3 + Bootstrap).
 
-La part d'editar els butlletins mostra dos maneres d'enviaments: Butlletins amb una sola columna (que ocupara el 100% de l'ample del contingut) i butlletins que mostren dues columnes, i podem publicar el nostre text personalitzat a les dues columes.
+Ara el formulari d'inserció de les dades està millor, on podem seleccionar si volem enviar un butlletí en format d'una o dues columnes, pensat sobretot per a enviar butlletins bilingües, castellà i valencià.
 
-![Formulari editar butlletins](https://raw.githubusercontent.com/joancatala/butlletins/master/enviar-boletin.png)
+He afegit totes les rutes absolutes i molts includes de les distintes seccions, per a minimitzar la llargària de les pàgines i tenir-ho tot més ordenat i comprensible per a modificacions.
 
-Una vegada enviarem el butlleti, s'ens mostrara la confirmacio de que el correu electronic ha segut enviat:
+Des de la versió 1.2, totes les dades es enmagatzemen a una base de dades MySQL/MariaDB de tal manera que una vegada hem enviat un butlletí a una o certes persones, el tindrem sempre arxivat, i podrem obrir-lo o, si volem, recuperar-lo i tornar-lo a enviar a un nou usuari. Des del llistat de butlletins podem buscar ja que hi ha un cercador ajax del bootstrap que ens permet fer cerques ràpides sense necessitat d'actualitzar la pàgina.
 
-![Butlleti enviat](https://raw.githubusercontent.com/joancatala/butlletins/master/boletin-enviado.png)
+![Portada](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-1.png)
 
-I finalment, la part visible que veu l'usuari es aquesta captura de pantalla:
+![Formulari d'inserció de les dades](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-2.png)
 
-![Butlleti rebut](https://raw.githubusercontent.com/joancatala/butlletins/master/boletin-recibido.png)
+![Últims butlletins publicats](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-3.png)
+
+![Llistat de butlletins](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-4.png)
+
+Els requisits per a fer servir Newsletters Senzills són simplement un servidor web (Nginx en el meu cas), PHP i tots els mòduls de MySQL (recomanable versions superiors a la 7, la versió 7.1 en el cas del meu servidor) i una base de dades MySQL/MariaDB.
+
