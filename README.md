@@ -8,13 +8,13 @@ He afegit totes les rutes absolutes i molts includes de les distintes seccions, 
 
 Des de la versió 1.2, totes les dades es enmagatzemen a una base de dades MySQL/MariaDB de tal manera que una vegada hem enviat un butlletí a una o certes persones, el tindrem sempre arxivat, i podrem obrir-lo o, si volem, recuperar-lo i tornar-lo a enviar a un nou usuari. Des del llistat de butlletins podem buscar ja que hi ha un cercador ajax del bootstrap que ens permet fer cerques ràpides sense necessitat d'actualitzar la pàgina.
 
-![Portada](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-1.png)
+![Portada](https://github.com/joancatala/butlletins/blob/master/vendor/versions/newsletters-senzills-1.png)
 
-![Formulari d'inserció de les dades](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-2.png)
+![Formulari d'inserció de les dades](https://github.com/joancatala/butlletins/blob/master/vendor/versions/newsletters-senzills-2.png)
 
-![Últims butlletins publicats](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-3.png)
+![Últims butlletins publicats](https://github.com/joancatala/butlletins/blob/master/vendor/versions/newsletters-senzills-3.png)
 
-![Llistat de butlletins](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-4.png)
+![Llistat de butlletins](https://github.com/joancatala/butlletins/blob/master/vendor/versions/newsletters-senzills-4.png)
 
 Els requisits per a fer servir Newsletters Senzills són simplement un servidor web (Nginx en el meu cas), PHP i tots els mòduls de MySQL (recomanable versions superiors a la 7, la versió 7.1 en el cas del meu servidor) i una base de dades MySQL/MariaDB.
 
