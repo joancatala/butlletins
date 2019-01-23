@@ -1,0 +1,74 @@
+		<!-- Cap de la web -->		
+		<?php include "vendor/inc/cap.inc"; ?>
+
+		<!-- Menú de la web -->		
+		<?php include "vendor/inc/menu.inc"; ?>
+
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="nouformulari">
+         
+		<!-- Connexió a la base de dades -->		
+		<?php include "vendor/inc/connexio.inc"; ?>
+
+		<!-- Primer enllaç a la base de dades -->		
+		<?php include "vendor/inc/link.inc"; ?>
+				
+				
+				
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="envia">
+        <div class="my-auto">
+          <h2>Processament del butlletí</h2>
+
+
+<?php
+header('Content-Type: text/html; charset=utf-8');
+// ---------------------------------------------------------------------------------------------
+// Anem a recollir les variables i a preparar-les
+// ---------------------------------------------------------------------------------------------
+$data = date("d/m/Y");
+$variable_para = $_POST["input_destinatari"];
+$variable_copia = $_POST["input_copia"];
+$variable_assumpte = $_POST["input_assumpte"];
+$variable_formato = $_POST["ch"];
+$variable_titol_es = $_POST["input_titol_es"];
+$variable_cos_es = $_POST["input_cos_es"];
+$variable_titol_ca = $_POST["input_titol_ca"];
+$variable_cos_ca = $_POST["input_cos_ca"];
+
+// Anem a convertir els espais del textarea en castellà 
+if (isset($variable_cos_es)) {
+$variable_cos_es = str_replace("\n", "<br />", $variable_cos_es);
+$variable_cos_es = str_replace("\r", "", $variable_cos_es);
+}
+
+// Anem a convertir els espais del textarea en valencià
+if (isset($variable_cos_ca)) {
+$variable_cos_ca = str_replace("\n", "<br />", $variable_cos_ca);
+$variable_cos_ca = str_replace("\r", "", $variable_cos_ca);
+}
+
+
+
+// DEBUG CASER D'ANAR PER CASA
+// Si vols fer provetes com transformacions, concatenacions, etc, nomès et cal descomentar 
+// les següents línies d'ací baix:
+//
+// echo "DATA: " .$data. "<br />";
+// echo "PARA: " .$variable_para. "<br />";
+// echo "COPIA: " .$variable_copia. "<br />";
+// echo "ASSUMPTE: " .$variable_assumpte. "<br />";
+// echo "FORMAT: " .$variable_formato. "<br /><br />";
+// echo "<strong>TITOL CASTELLÀ:</strong> " .$variable_titol_es. "<br />";
+// echo "COS CASTELLÀ: " .$variable_cos_es. "<br /><br />";
+// echo "<strong>TITOL VALENCIÀ:</strong> " .$variable_titol_ca. "<br />";
+// echo "COS VALENCIÀ: " .$variable_cos_ca. "<br />";
+// ?>
+
+
+
+										
+		 </div></section>
+				
+				
+		<!-- Peu de la web -->		
+		<?php include "vendor/inc/peu.inc"; ?>

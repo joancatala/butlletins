@@ -1,0 +1,80 @@
+body{font-family:Muli,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';padding-top:54px;color:#868e96}
+@media (min-width:992px){body{padding-top:0;padding-left:17rem}}
+h1,h2,h3,h4,h5,h6{font-family:'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-weight:700;text-transform:uppercase;color:#343a40}
+h1{font-size:6rem;line-height:5.5rem}h2{font-size:3.5rem}h3{font-size:2rem}
+p.lead{font-size:1.15rem;font-weight:400}
+.subheading{text-transform:uppercase;font-weight:500;font-family:'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:1.5rem}
+.iconets-portada img {width: 60px;}
+.iconets-portada img:hover, .iconets-portada a:hover {text-decoration: none; }
+.dev-icons{font-size:3rem}
+.dev-icons .list-inline-item i:hover{color:#a81d37}
+#sideNav .navbar-nav .nav-item .nav-link{font-weight:800;letter-spacing:.05rem;text-transform:uppercase}
+#sideNav .navbar-toggler:focus{outline-color:#d48a6e}
+@media (min-width:992px){#sideNav{text-align:center;position:fixed;top:0;left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:17rem;height:100vh}
+#sideNav .navbar-brand{display:-webkit-box;display:-ms-flexbox;display:flex;margin:auto auto 0;padding:.5rem}
+#sideNav .navbar-brand .img-profile{max-width:10rem;max-height:10rem;border:.5rem solid #000;}
+#sideNav .navbar-collapse{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;width:100%;margin-bottom:auto}
+#sideNav .navbar-collapse .navbar-nav{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%}
+#sideNav .navbar-collapse .navbar-nav .nav-item{display:block}
+#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link{display:block}}
+section.resume-section{padding-top:5rem!important;padding-bottom:5rem!important;max-width:75rem}
+section.resume-section .resume-item .resume-date{min-width:none}
+@media (min-width:768px){section.resume-section{min-height:100vh} section.resume-section .resume-item .resume-date{min-width:18rem}}
+@media (min-width:992px){section.resume-section{padding-top:3rem!important;padding-bottom:3rem!important}}
+ .bg-primary{background-color:#a81d37!important}
+ .text-primary{color:#a81d37!important}a{color:#a81d37}
+ a:active,a:focus,a:hover{color:#824027}
+ 
+ /* ultims newsletters publicats */
+ div.ultimsnewsletters {border: 2px solid #ccc; padding: 20px; margin: 0 0 20px 0; }
+ div.ultimsnewsletters:hover {background:  #f2f2f2;}
+ 
+ /* llista de butlletins */
+ input#myInput {width: 300px; }
+ ul.listadetotselsbutlletins {width: 100%;  }
+ li.llista {}
+ li.llista:hover {background:  #f2f2f2;}
+ .botonetsubmit-menut {float: right;}
+ select.filtres {font-size: 12px; }
+ 
+ /* llista de butlletins 2 */
+ 
+ .llista-ajax:hover {background:  #f2f2f2;}
+ .llista-ajax-esquerra {float: left; width: 100px; min-height: 80px; font-size: 29px; font-weight: bold;}
+ .llista-ajax-dreta {float: right: width: 500px; min-height: 80px;}
+.opcions {margin: 20px 5px 0 0; float: left; }
+ 
+/* formulari */
+textarea {width: 100%;}
+.ambfons {background: #ccc; width: 100%; font-size: 14px; font-weight: bold; } 
+input {width: 280px;}
+input.titol {width: 100%;}
+textarea {height: 60px;}
+input, textarea {text-decoration: none;}
+.labels-mes-menuts {font-size: 11px; }
+.filtro1 {/*background: yellow;*/ }
+.filtro2 {/*background: green;*/ padding-top: 5px; }
+.filtro3 {/*background: red;*/  padding-top: 5px;}
+
+button.botoinfo {background-color: #ccc; color: #000; border-color: #ccc; font-size: 9px; }
+button.botoinfo:hover {background-color: #a81d37; border-color: #a81d37;}
+input.botoenviar {font-weight: bold; margin-top: 10px; font-size: 18px; } 
+
+#previsualitzacio-formatbutlleti-1
+{
+    display: block;
+    height:150px;
+    width:220px;
+ 	 background-image:  url("/img/newsletter-format-1-columna.png");
+}
+
+#previsualitzacio-formatbutlleti-2
+{
+    display: none;
+    height:150px;
+    width:220px;
+ 	 background-image:  url("/img/newsletter-format-2-columnes.png");
+}
+
+
+.radio-toolbar input[type="radio"] {width: 50px; }

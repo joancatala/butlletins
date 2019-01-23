@@ -1,0 +1,63 @@
+
+		<!-- Cap de la web -->		
+		<?php include "vendor/inc/cap.inc"; ?>
+
+		<!-- Menú de la web -->		
+		<?php include "vendor/inc/menu.inc"; ?>
+
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about"><div>
+      
+      <h2 class="mb-5">Llista</h2>
+      <div>
+
+		<input class="form-control" id="myInput" type="text" placeholder="Filtra ací per paraules..">
+		<ul class="list-group" id="myList">
+    
+		<!-- Connexió a la base de dades -->		
+		<?php include "vendor/inc/connexio.inc"; ?>
+
+		<!-- Primer enllaç a la base de dades -->		
+		<?php include "vendor/inc/link.inc"; ?>
+	
+		<?php
+		$consulta2 = "SELECT id, data, titol, cos FROM $taula order by id desc;";
+		$resultat = mysqli_query($link, $consulta2); 
+				
+		while($row = mysqli_fetch_array($resultat))
+		{
+	
+      	echo '<li class="llista list-group-item"><a href=""><img src="/img/obrir.png" /></a><a href=""><img src="/img/esborrar.png" /></a>&nbsp;&nbsp;<strong>Nº:</strong>'. $row["id"] .' // '. $row["titol"] ."</li>";
+      } 
+				
+      mysqli_free_result($resultat); 
+      mysqli_close($link);
+		?>
+
+	   </ul>   
+      
+      
+   <!-- script per a activar el cercador de dalt amb jQuery -->   
+	<script>
+	$(document).ready(function(){
+  	$("#myInput").on("keyup", function() {
+    	var value = $(this).val().toLowerCase();
+    	$("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    	});
+  	});
+	});
+	</script>
+
+
+
+
+
+      
+
+
+
+	</div></section>
+
+		<!-- Peu de la web -->		
+		<?php include "vendor/inc/peu.inc"; ?>

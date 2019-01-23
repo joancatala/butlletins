@@ -1,9 +1,12 @@
-<!-- Cap de la web -->		
-<?php include "vendor/inc/cap.inc"; ?>
+		<!-- Cap de la web -->		
+		<?php include "vendor/inc/cap.inc"; ?>
 
-<!-- Menú de la web -->		
-<?php include "vendor/inc/menu.inc"; ?>
+		<!-- Menú de la web -->		
+		<?php include "vendor/inc/menu.inc"; ?>
 
+
+  
+  
     <div class="container-fluid p-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
@@ -36,6 +39,35 @@
 
         </div>
       </section>
+      
+        
+  
 
-<!-- Peu de la web -->		
-<?php include "vendor/inc/peu.inc"; ?>
+		<!-- Peu de la web -->		
+		<?php include "vendor/inc/peu.inc"; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

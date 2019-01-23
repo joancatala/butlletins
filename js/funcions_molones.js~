@@ -1,0 +1,31 @@
+ 
+	function unacolumna_exclusivo() {
+	 	document.getElementById("element_5").disabled = document.getElementById("element_4").value.length;
+		document.getElementById("element_6").disabled = document.getElementById("element_4").value.length;
+	}
+
+	function doscolumnas_exclusivo() {
+		document.getElementById("element_4").disabled = document.getElementById("element_5").value.length || document.getElementById("element_6").value.length;			
+	}
+
+
+
+
+	<!-- Previsualitzem el format del butlletí fent click als radiobuttons (o 1 columna o 2 columnes) -->
+	function CB(bg) {
+    	/* var url; */
+    	if(bg=="format1")
+    	{
+    	/* url="http://newsletters.joancatala.net/img/obir.png"; */ 
+    	/* document.getElementById("previsualitzacio-formatbutlleti").style.backgroundImage = "url(" + url + ")"; */
+    	document.getElementById("previsualitzacio-formatbutlleti-1").style.display="block";
+    	document.getElementById("previsualitzacio-formatbutlleti-2").style.display="none";
+    	}
+    	else if(bg=="format2")
+    	{
+ 	 	/* url="http://newsletters.joancatala.net/img/esborrar.png"; */
+    	/* document.getElementById("previsualitzacio-formatbutlleti").style.backgroundImage = "url(" + url + ")"; */   
+    	document.getElementById("previsualitzacio-formatbutlleti-1").style.display="none";
+		document.getElementById("previsualitzacio-formatbutlleti-2").style.display="block";         
+    	}
+    	}
