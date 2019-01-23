@@ -2,10 +2,10 @@
       // ---------------------------------------------------------------------------------------------
       // Insertem aquestes dades a la base de dades
       // ---------------------------------------------------------------------------------------------
-      $host = "xxxxxxx";
+      $host = "localhost";
       $port = "3306";
-      $usuari = "xxxxxxx";
-      $contrasenya = "xxxxxxx";
-      $base ="xxxxxxxxx";
-      $taula = "xxxxxxxxxx";
+      $usuari = "butlletins";
+      $contrasenya = "Alegria2018";
+      $base ="newsletters_db";
+      $taula = "newsletters";
 ?>
