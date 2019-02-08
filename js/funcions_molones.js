@@ -1,33 +1,80 @@
 
-	function escrivimDestinatari() {
+	/* function escrivimDestinatari() {
 	 	document.getElementById("input_titol_es").disabled = document.getElementById("input_destinatari").value.length;
 		document.getElementById("input_cos_es").enabled = document.getElementById("input_destinatari").value.length;
 	}
-
+	*/
+	
+	/*
 	function doscolumnas_exclusivo() {
 		document.getElementById("element_4").disabled = document.getElementById("element_5").value.length || document.getElementById("element_6").value.length;			
 	}
+	*/
+	
+	function revisaDestinatari() {
+		if (document.getElementById("input_destinatari").value.length == 0) {
+          alert('ATENCIÓ, HI HA ALGÚN PROBLEMA EN EL TEU FORMULARI:\n\nNo has escrit cap destinatari.\nI com ja sabràs, el destinatari és un camp obligat quan enviem correus electrònics.');                        
+        }
 
+}
 
 	<!-- Previsualitzem el format del butlletí fent click als radiobuttons (o 1 columna o 2 columnes) -->
 	function CB(bg) {
-    	/* var url; */
     	if(bg=="format1")
     	{
-    	/* url="http://newsletters.joancatala.net/img/obir.png"; */ 
-    	/* document.getElementById("previsualitzacio-formatbutlleti").style.backgroundImage = "url(" + url + ")"; */
     	document.getElementById("previsualitzacio-formatbutlleti-1").style.display="block";
     	document.getElementById("previsualitzacio-formatbutlleti-2").style.display="none";
     	}
     	else if(bg=="format2")
     	{
- 	 	/* url="http://newsletters.joancatala.net/img/esborrar.png"; */
-    	/* document.getElementById("previsualitzacio-formatbutlleti").style.backgroundImage = "url(" + url + ")"; */   
     	document.getElementById("previsualitzacio-formatbutlleti-1").style.display="none";
 		document.getElementById("previsualitzacio-formatbutlleti-2").style.display="block";         
     	}
     	}
 		
-		
+	<!-- Previsualitzem el format de les categories fent click als radiobuttons de les categories) -->
+	function CBcategoria(bgcategoria) {
+    	if(bgcategoria=="categoria1")
+    	{
+    	document.getElementById("previsualitzacio-categoriabutlleti-1").style.display="block";
+    	document.getElementById("previsualitzacio-categoriabutlleti-2").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-3").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-4").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-5").style.display="none";
+    	}
+    	else if(bgcategoria=="categoria2")
+    	{
+    	document.getElementById("previsualitzacio-categoriabutlleti-1").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-2").style.display="block";
+		document.getElementById("previsualitzacio-categoriabutlleti-3").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-4").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-5").style.display="none";
+    	}
+    	else if(bgcategoria=="categoria3")
+    	{
+    	document.getElementById("previsualitzacio-categoriabutlleti-1").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-2").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-3").style.display="block";
+		document.getElementById("previsualitzacio-categoriabutlleti-4").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-5").style.display="none";
+    	}
+    	else if(bgcategoria=="categoria4")
+    	{
+    	document.getElementById("previsualitzacio-categoriabutlleti-1").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-2").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-3").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-4").style.display="block";
+		document.getElementById("previsualitzacio-categoriabutlleti-5").style.display="none";
+    	}
+		else if(bgcategoria=="categoria5")
+    	{
+    	document.getElementById("previsualitzacio-categoriabutlleti-1").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-2").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-3").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-4").style.display="none";
+		document.getElementById("previsualitzacio-categoriabutlleti-5").style.display="block";
+    	}	
+    	}
+				
 
 

@@ -25,6 +25,9 @@ section.resume-section .resume-item .resume-date{min-width:none}
  .text-primary{color:#a81d37!important}a{color:#a81d37}
  a:active,a:focus,a:hover{color:#824027}
  
+ /* Peu del butlletí, on tenim les clàusules xicotetes*/
+ 
+ 
  /* ultims newsletters publicats */
  div.ultimsnewsletters {border: 2px solid #ccc; padding: 20px; margin: 0 0 20px 0; }
  div.ultimsnewsletters:hover {background:  #f2f2f2;}
@@ -40,7 +43,7 @@ section.resume-section .resume-item .resume-date{min-width:none}
  /* llista de butlletins 2 */
  
  .llista-ajax:hover {background:  #f2f2f2;}
- .llista-ajax-esquerra {float: left; width: 100px; min-height: 80px; font-size: 29px; font-weight: bold;}
+ .llista-ajax-esquerra {float: left; width: 230px; min-height: 80px; font-size: 29px; font-weight: bold;}
  .llista-ajax-dreta {float: right: width: 500px; min-height: 80px;}
 .opcions {margin: 20px 5px 0 0; float: left; }
  
@@ -55,26 +58,97 @@ input, textarea {text-decoration: none;}
 .filtro1 {/*background: yellow;*/ }
 .filtro2 {/*background: green;*/ padding-top: 5px; }
 .filtro3 {/*background: red;*/  padding-top: 5px;}
+.bannerformmodal {width: 500px; 300px;}
 
 button.botoinfo {background-color: #ccc; color: #000; border-color: #ccc; font-size: 9px; }
 button.botoinfo:hover {background-color: #a81d37; border-color: #a81d37;}
 input.botoenviar {font-weight: bold; margin-top: 10px; font-size: 18px; } 
 
+/* Previsualització dels formats 1 o 2 columnes */
 #previsualitzacio-formatbutlleti-1
 {
-    display: block;
-    height:150px;
-    width:220px;
+   display: block;
+   height:150px;
+   width:220px;
  	 background-image:  url("/img/newsletter-format-1-columna.png");
 }
 
 #previsualitzacio-formatbutlleti-2
 {
-    display: none;
-    height:150px;
-    width:220px;
+   display: none;
+   height:150px;
+   width:220px;
  	 background-image:  url("/img/newsletter-format-2-columnes.png");
 }
 
+/* Previsualització dels formats de la capçalera segons la categoria */
+
+#previsualitzacio-categoriabutlleti-1
+{
+   display: block;
+   height:150px;
+   width:220px;
+ 	 background-image:  url("/img/preview-newsletter-rgpd.png");  
+}
+
+#previsualitzacio-categoriabutlleti-2
+{
+   display: none;
+   height:150px;
+   width:220px;
+ 	 background-image:  url("/img/preview-newsletter-sepam.png");
+}
+
+#previsualitzacio-categoriabutlleti-3
+{
+   display: none;
+   height:150px;
+   width:220px;
+ 	 background-image:  url("/img/preview-newsletter-pwm.png");
+}
+
+#previsualitzacio-categoriabutlleti-4
+{
+   display: none;
+   height:150px;
+   width:220px;
+ 	 background-image:  url("/img/preview-newsletter-app-aytos-castello.png");
+}
+
+#previsualitzacio-categoriabutlleti-5
+{
+   display: none;
+   height:150px;
+   width:220px;
+ 	 background-image:  url("/img/preview-newsletter-pmh.png");
+}
 
 .radio-toolbar input[type="radio"] {width: 50px; }
+.imatgepreviewcategoria-javascript {margin-left: 30px; }
+.imatgepreviewformat-javascript {margin-left: 70px; }
+
+/* Enllaços de color gris (per a la pàgina butlleti.php, a la part superior ) */
+a.enlac-gris {color:#868e96; text-decoration: underline;}
+
+
+
+
+/* Provetes */
+
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+

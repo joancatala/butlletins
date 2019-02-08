@@ -33,9 +33,11 @@
 			<div class="col-md-5 filtro3">
 					Categoria: <select class="filtres" name="categoria">
 					  <option value="totes">[Totes]</option>
-					  <option value="gener2019">RGPD</option>
-					  <option value="febrer2019">PWM</option>
-					  <option value="marc2019">Informàtica municipal</option>
+					  <option value="#">RGPD</option>
+					  <option value="#">PWM</option>
+					  <option value="#">SEPAM</option>
+					  <option value="#">App dels Ajuntaments</option>
+					  <option value="#">Assistència P.M.H.</option>
 					</select>
 					<button type='submit' class='botonetsubmit-menut btn btn-secondary btn-sm btn-secondary'>Filtrar resultats</button>
 					</form>	
@@ -51,12 +53,34 @@
 <?php include "vendor/inc/link.inc"; ?>
 	
 <?php
-	$consulta2 = "SELECT id, data, titol_es, titol_ca FROM $taula order by id desc;";
-	$resultat = mysqli_query($link, $consulta2); 
-				
+	$consulta2 = "SELECT id, data, titol_es, categoria, titol_ca FROM $taula order by id desc;";
+	$resultat = mysqli_query($link, $consulta2);
+
 	while($row = mysqli_fetch_array($resultat))
 	{
-		echo '<li class="llista list-group-item"><div class="llista-ajax"><div class="llista-ajax-esquerra">Nº ' . $row["id"]. '</div><div class="llista-ajax-dreta">'. $row["titol_es"] . '<br />'. $row["titol_ca"]. '<br /><a href="/recuperar-butlleti.php?id=' .$row["id"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Reeditar butlletí</button></a>&nbsp;<a href="/butlleti.php?id=' .$row["id"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Visualitzar butlletí</button></a><a onClick="return confirm(\'Estàs segur de voler esborrar aquest butlletí?\')" href="/esborrar.php?id='.$row["id"].'"><button type="button" class="opcions btn btn-secondary btn-sm btn-danger">Esborrar</button></a></div></div></li>';
+		
+		/* Anem a seleccionar la imatge fent un switch que compara el valor de la categoria del butlletí (categoria1, categoria2, ... categorian) */
+		
+		switch ($row["categoria"]) {
+			case "categoria1":
+				$imatge_butlleti = "preview-newsletter-rgpd.png";
+				break;
+			case "categoria2":
+				$imatge_butlleti = "preview-newsletter-sepam.png";
+				break;
+			case "categoria3":
+				$imatge_butlleti = "preview-newsletter-pwm.png";
+				break;
+			case "categoria4":
+				$imatge_butlleti = "preview-newsletter-app-aytos-castello.png";
+				break;
+			case "categoria5":
+				$imatge_butlleti = "preview-newsletter-pmh.png";
+				break;			
+		}
+
+		
+		echo '<li class="llista list-group-item"><div class="llista-ajax"><div class="llista-ajax-esquerra"><img src="/img/'. $imatge_butlleti .'" /></div><div class="llista-ajax-dreta">'. $row["titol_es"] . '<br />'. $row["titol_ca"]. '<br /><a href="/butlleti.php?id=' .$row["id"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Visualitzar</button></a><a href="/recuperar-butlleti.php?id=' .$row["id"]. '&categoria='. $row["categoria"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Reeditar</button></a>&nbsp;<a href="/genera/pdf.php?id=' .$row["id"]. '&categoria='. $row["categoria"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Genera un PDF</button></a><a onClick="return confirm(\'Estàs segur de voler esborrar aquest butlletí?\')" href="/esborrar.php?id='.$row["id"].'"><button type="button" class="opcions btn btn-secondary btn-sm btn-danger">Esborrar</button></a></div></div></li>';
     } 
 				
     mysqli_free_result($resultat); 

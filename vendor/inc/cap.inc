@@ -1,3 +1,5 @@
+<?php include "vendor/inc/configuracio.inc"; ?>
+
 <!-- 
  _   _                   _      _   _
 | \ | | _____      _____| | ___| |_| |_ ___ _ __ ___
@@ -11,8 +13,9 @@
  ___) |  __/ | | |/ /| | | \__ \
 |____/ \___|_| |_/___|_|_|_|___/
 
-23 de gener 2019
-Newsletters Senzills v1.2
+Iniciat el 23 de gener 2019
+Versió actual <?php echo versio; ?>
+
 Autor: Joan Català <jcatala@dipcas.es>
 -->
 
@@ -22,10 +25,10 @@ Autor: Joan Català <jcatala@dipcas.es>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Newsletters senzills són butlletins personalitzats amb HTML i arxivats a una base de dades">
-    <meta name="author" content="joan català <jcatala@dipcas.es>" >
+    <meta name="author" content="joan català <jcatala@dipcas.es>">
 
-    <title>Newsletters senzills v1.2</title>
-
+    <title><?php echo nom_projecte[0]; ?> <?php echo nom_projecte[1]; ?> <?php echo versio;?></title>
+    
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 
@@ -43,5 +46,5 @@ Autor: Joan Català <jcatala@dipcas.es>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 
   </head>
-
+     
   <body id="page-top">

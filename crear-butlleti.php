@@ -16,31 +16,63 @@
 <?php include "vendor/inc/link.inc"; ?>
 
 <form id="form_42394" class="appnitro" method="post" action="./envia.php">
+	
+	<div class="row filaformulari">
+  <div class="col-md-6">
+			<div class="ambfons">DADES PRINCIPALS DEL BUTLLETÍ</div><br />
+			<span class="labels-mes-menuts">Destinatari:</span> <input type="text" class="form-control" id="input_destinatari" name="input_destinatari"><br />
+			<span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" value="[Boletín/Butlletí] ..."></div>
+	
+  <div class="col-md-6">
+			<div class="ambfons">REENVIAMENT DEL BUTLLETÍ</div><br />
+			<span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia"><br />
+			<span class="labels-mes-menuts">Còpia oculta (BCC):</span> <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta">
+	</div>
+	</div>
+	
+	<br /><br />
+	
 	<div class="row filaformulari">
 	<div class="col-md-6">
-	<div class="ambfons">DADES PRINCIPALS DEL BUTLLETÍ</div><br />
+	<div class="ambfons">CATEGORIA DEL BUTLLETÍ</div><br />
 			<div class="row filaformulari">
-  			<div class="col-md-6"><span class="labels-mes-menuts">Destinatari:</span> <input type="text" class="form-control" id="input_destinatari" name="input_destinatari"></div>
-  			<div class="col-md-6"><span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia"></div>
-		</div><br />
+							<div class="col-md-6 radio-toolbar">
+							<fieldset id="grup-categoria">
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria1" onClick="CBcategoria(this.value);" checked="checked" />RGPD</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria4" onClick="CBcategoria(this.value);" />App dels Ajuntaments</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria5" onClick="CBcategoria(this.value);" />Assistència P.M.H.</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria3" onClick="CBcategoria(this.value);" />PWM</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria2" onClick="CBcategoria(this.value);" />SEPAM</label><br />
+							</fieldset>
+							</div>
+								<div class="col-md-5 imatgepreviewcategoria-javascript">
+									<div id="previsualitzacio-categoriabutlleti-1"></div>
+									<div id="previsualitzacio-categoriabutlleti-2"></div>
+									<div id="previsualitzacio-categoriabutlleti-3"></div>
+									<div id="previsualitzacio-categoriabutlleti-4"></div>
+									<div id="previsualitzacio-categoriabutlleti-5"></div>
+								</div>
+		</div>
 		
-		<div class="row filaformulari">
-  			<div class="col-md-12"><span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" value="[Boletín/Butlletí] ..."></div>
-		</div>		  		
-  	</div>
+		  		
+  	</div> 
   		
   		<div class="col-md-6">
 	   	<div class="row filaformulari">
   			<div class="col-md-12"><div class="ambfons">FORMAT DELS CORREUS ELECTRÒNICS</div><br /></div>
-		
-  		<div class="col-md-5 radio-toolbar">
-  			<label class="labels-mes-menuts"><input type="radio"  checked="checked" name="ch" value="format1" onClick="CB(this.value);" />1 columna</label><br />
-         <label class="labels-mes-menuts"><input type="radio"  name="ch" value="format2" onClick="CB(this.value);" />2 columnes</label>
-  		</div>
-  		<div class="col-md-7">
-  			<div id="previsualitzacio-formatbutlleti-1"></div>
-  			<div id="previsualitzacio-formatbutlleti-2"></div>
-  		</div>
+				<div class="row filaformulari">
+							<div class="col-md-5 radio-toolbar">
+								<fieldset id="grup-format">
+									<label class="labels-mes-menuts"><input type="radio"  checked="checked" name="ch" value="format1" onClick="CB(this.value);" />1 columna</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="ch" value="format2" onClick="CB(this.value);" />2 columnes</label>
+								</fieldset>
+							</div>
+								<div class="col-md-5 imatgepreviewformat-javascript">
+									<div id="previsualitzacio-formatbutlleti-1"></div>
+									<div id="previsualitzacio-formatbutlleti-2"></div>			
+								</div>
+				</div>
+				
 			</div>  		
   	</div>
 		</div>
@@ -54,15 +86,15 @@
 			</span><input type="text" class="form-control" id="input_titol_es" name="input_titol_es"><br />
   		<span class="labels-mes-menuts">Cuerpo:
 				
-								<!-- Button trigger modal -->
-								<a href="#bannerformmodal" data-toggle="modal" data-target="#bannerformmodal">(Puedes escribir en HTML)</a></span>
+														<!-- Button trigger modal -->
+								<a href="#bannerformmoda2" data-toggle="modal" data-target="#bannerformmoda2">(Puedes escribir con HTML)</a></span>
 
 								<!-- Modal -->
-								<div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodal">
+								<div class="modal fade bannerformmoda2" tabindex="-1" role="dialog" aria-labelledby="bannerformmoda2" aria-hidden="true" id="bannerformmoda2">
 									<div class="modal-dialog modal-dialog-centered" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLongTitle">Usa HTML en tus boletines</h5>
+												<h5 class="modal-title" id="exampleModalLongTitle">Utiliza HTML en tus boletines</h5>
 												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 													<span aria-hidden="true">&times;</span>
 												</button>
@@ -117,7 +149,9 @@
 
 	<input type="hidden" name="form_id" value="42394" />
 	<!-- antic botó <input id="saveForm" class="button_text botoenviar" type="submit" name="submit" value="Enviar butlletí" /> -->
-  <br /><button id="saveForm" type='submit' class='btn btn-secondary btn-sm btn-secondary'>Enviar butlletí</button>
+  <br />
+	<button id="boto_enviar" type='submit' class='btn btn-secondary btn-sm btn-secondary' onmouseover="revisaDestinatari();">Enviar butlletí</button>
+	<button id="boto_previsualitzar" type='submit' class='btn btn-secondary btn-sm btn-secondary' formaction="/previsualitzar.php" onmouseover="revisaDestinatari();">Previsualitzar</button>
 
 	</form>
 

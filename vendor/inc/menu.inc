@@ -14,10 +14,10 @@
             <a class="nav-link js-scroll-trigger" href="crear-butlleti.php">Crear un butlletí</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="ultims-publicats.php">Últims publicats</a>
+            <a class="nav-link js-scroll-trigger" href="llistat-de-butlletins.php">Llistat</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="llistat-de-butlletins.php">Llistat</a>
+            <a class="nav-link js-scroll-trigger" href="preguntes-frequents.php">Ajuda</a>
           </li>          
         </ul>
       </div>
