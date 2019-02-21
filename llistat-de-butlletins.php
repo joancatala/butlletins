@@ -4,7 +4,6 @@
 <!-- Menú de la web -->	
 <?php include "vendor/inc/menu.inc"; ?>
 
-
 <section class="resume-section p-3 p-lg-5 " id="about"><div>
       
 <h2 class="mb-5">Llistat de tots els butlletins</h2>
@@ -27,6 +26,11 @@
 					  <option value="abril2019">Abril 2019</option>
 					  <option value="maig2019">Maig 2019</option>
 					  <option value="juny2019">Juny 2019</option>
+					  <option value="agost2019">Agost 2019</option>
+					  <option value="setembre2019">Setembre 2019</option>
+					  <option value="octubre2019">Octubre 2019</option>
+					  <option value="novembre2019">Novembre 2019</option>
+					  <option value="desembre2019">Desembre 2019</option>
 					</select>
 			</div>
 			
@@ -38,6 +42,7 @@
 					  <option value="#">SEPAM</option>
 					  <option value="#">App dels Ajuntaments</option>
 					  <option value="#">Assistència P.M.H.</option>
+					  <option value="#">Gobierno Abierto</option>
 					</select>
 					<button type='submit' class='botonetsubmit-menut btn btn-secondary btn-sm btn-secondary'>Filtrar resultats</button>
 					</form>	
@@ -76,13 +81,61 @@
 				break;
 			case "categoria5":
 				$imatge_butlleti = "preview-newsletter-pmh.png";
-				break;			
+				break;
+			case "categoria6":
+				$imatge_butlleti = "preview-newsletter-gobiernoabierto.png";
+				break;				
 		}
 
 		
-		echo '<li class="llista list-group-item"><div class="llista-ajax"><div class="llista-ajax-esquerra"><img src="/img/'. $imatge_butlleti .'" /></div><div class="llista-ajax-dreta">'. $row["titol_es"] . '<br />'. $row["titol_ca"]. '<br /><a href="/butlleti.php?id=' .$row["id"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Visualitzar</button></a><a href="/recuperar-butlleti.php?id=' .$row["id"]. '&categoria='. $row["categoria"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Reeditar</button></a>&nbsp;<a href="/genera/pdf.php?id=' .$row["id"]. '&categoria='. $row["categoria"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Genera un PDF</button></a><a onClick="return confirm(\'Estàs segur de voler esborrar aquest butlletí?\')" href="/esborrar.php?id='.$row["id"].'"><button type="button" class="opcions btn btn-secondary btn-sm btn-danger">Esborrar</button></a></div></div></li>';
-    } 
-				
+		echo '<li class="llista list-group-item"><div class="llista-ajax"><div class="llista-ajax-esquerra"><img src="/img/'. $imatge_butlleti .'" /></div><div class="llista-ajax-dreta">'. $row["titol_es"] . '<br />'. $row["titol_ca"]. '<br /><a href="/butlleti.php?id=' .$row["id"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Visualitzar</button></a><a href="/recuperar-butlleti.php?id=' .$row["id"]. '&categoria='. $row["categoria"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Reeditar</button></a>&nbsp;<a href="/genera/pdf.php?id=' .$row["id"]. '&categoria='. $row["categoria"]. '"><button type="button" class="opcions btn btn-secondary btn-sm btn-secondary">Genera un PDF</button></a><a onClick="esborrarbutlleti('.$row["id"].');"><button type="button" class="opcions btn btn-secondary btn-sm btn-danger">Esborrar</button></a></div></div></li>';
+    
+	    // Ara agafem la variable $identificador_butlleti i la passarem al butó d'esborrar dins del modal.
+		$identificador_butlleti = $row["id"];
+		//echo $identificador_butlleti;
+		
+		?>
+		
+
+								<!-- Modal d'avís de si vols esborrar el butlletí -->
+								<div class="modal fade bannerformmoda2" tabindex="-1" role="dialog" aria-labelledby="esborrarbutlleti" aria-hidden="true" id="esborrarbutlleti<?php echo $identificador_butlleti;?>">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Vols esborrar aquest butlletí?</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+
+												Estàs a punt d'esborrar un butlletí que prèviament havia segut desat a la base de dades de l'aplicació.<br /><br />
+												Aquesta és una decisió sensible, ja que si esborres el teu butlletí no hi ha manera de recuperar-lo. Aleshores, per motius
+												de seguretat, necessitem que confirmes la teua identitat com a administrador dels butlletins:<br /><br />
+																								
+												<form class="form-inline" method="post" action="./esborrar.php">
+												<div class="form-group mx-sm-3 mb-2">
+												  <label for="inputPassword2" class="sr-only">Password</label>
+												  <input type="hidden" name="id_del_butlleti" value="<?php echo $identificador_butlleti;?>" />
+												  <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
+												</div>
+												<a href="./esborrar.php"><button type="submit" class="btn btn-primary mb-2 btn-danger">Esborrar butlletí</button></a>
+											  </form>
+												
+												<br /><br />												
+												
+											</div>
+										</div>
+									</div>
+								</div>		
+		
+		
+		
+	<?php
+		
+	}
+	
+	
     mysqli_free_result($resultat); 
     mysqli_close($link);
 	?>
@@ -101,6 +154,8 @@
 	});
 	</script>
 
+
+	
 </div></section>
 
 <!-- Peu de la web -->	

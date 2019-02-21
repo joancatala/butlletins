@@ -19,14 +19,45 @@
 	
 	<div class="row filaformulari">
   <div class="col-md-6">
-			<div class="ambfons">DADES PRINCIPALS DEL BUTLLETÍ</div><br />
-			<span class="labels-mes-menuts">Destinatari:</span> <input type="text" class="form-control" id="input_destinatari" name="input_destinatari"><br />
-			<span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" value="[Boletín/Butlletí] ..."></div>
+			<div class="ambfons">DESTINATARIS DEL BUTLLETÍ</div><br />
+			<span class="labels-mes-menuts">Destinatari:
+			
+			<!-- Button trigger modal -->
+								<a href="#bannerformmoda2" data-toggle="modal" data-target="#bannerformmodaladreces">(Informació d'ajuda)</a></span>
+
+								<!-- Modal -->
+								<div class="modal fade bannerformmoda2" tabindex="-1" role="dialog" aria-labelledby="bannerformmodaladreces" aria-hidden="true" id="bannerformmodaladreces">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Envia el butlletí a moltes adreces de correu</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<p>Si vols enviar un butlletí massiu que arribe a molts destinataris, escriu les adreces de correu electrònic separades separades amb comes (<strong>,</strong>) o punt i coma (<strong>;</strong>). </p>
+												Per exemple:<br /><br />
+												<i>-correu1@u<strong>,</strong> correu2@dos<strong>,</strong> correu3@tres<strong>,</strong> etc...</i><br />
+												<i>-correu1@u<strong>;</strong> correu2@dos<strong>;</strong> correu3@tres<strong>;</strong> etc...</i><br /><br />
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+			<input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta">
+	</div>
+	
+	
+	
+	
 	
   <div class="col-md-6">
-			<div class="ambfons">REENVIAMENT DEL BUTLLETÍ</div><br />
-			<span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia"><br />
-			<span class="labels-mes-menuts">Còpia oculta (BCC):</span> <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta">
+			<div class="ambfons">ASSUMPTE DEL BUTLLETÍ</div><br />
+			<span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" onClick="esborraCampAssumpte();" value="[Boletín/Butlletí] ...">
+			<!-- <span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia"><br /> --> 
+			<!-- <span class="labels-mes-menuts">Còpia oculta (BCC):</span> <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta"> -->
 	</div>
 	</div>
 	
@@ -43,6 +74,7 @@
 									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria5" onClick="CBcategoria(this.value);" />Assistència P.M.H.</label><br />
 									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria3" onClick="CBcategoria(this.value);" />PWM</label><br />
 									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria2" onClick="CBcategoria(this.value);" />SEPAM</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria6" onClick="CBcategoria(this.value);" />Gobierno Abierto</label><br />
 							</fieldset>
 							</div>
 								<div class="col-md-5 imatgepreviewcategoria-javascript">
@@ -51,6 +83,7 @@
 									<div id="previsualitzacio-categoriabutlleti-3"></div>
 									<div id="previsualitzacio-categoriabutlleti-4"></div>
 									<div id="previsualitzacio-categoriabutlleti-5"></div>
+									<div id="previsualitzacio-categoriabutlleti-6"></div>
 								</div>
 		</div>
 		
@@ -60,18 +93,26 @@
   		<div class="col-md-6">
 	   	<div class="row filaformulari">
   			<div class="col-md-12"><div class="ambfons">FORMAT DELS CORREUS ELECTRÒNICS</div><br /></div>
-				<div class="row filaformulari">
-							<div class="col-md-5 radio-toolbar">
-								<fieldset id="grup-format">
-									<label class="labels-mes-menuts"><input type="radio"  checked="checked" name="ch" value="format1" onClick="CB(this.value);" />1 columna</label><br />
-									<label class="labels-mes-menuts"><input type="radio"  name="ch" value="format2" onClick="CB(this.value);" />2 columnes</label>
-								</fieldset>
-							</div>
-								<div class="col-md-5 imatgepreviewformat-javascript">
+
+					<div class="row filaformulari">
+
+					<div class="col-md-5 radio-toolbar2">
+						<fieldset id="grup-categoria">
+									<label class="labels-mes-menuts"><input type="radio"  name="ch" value="format1" onClick="CB(this.value);" checked="checked" />1 columna</label><br />
+									<label class="labels-mes-menuts"><input type="radio"  name="ch" value="format2" onClick="CB(this.value);" />2 columnes</label><br />
+						</fieldset>
+					</div>
+	
+					<div class="col-md-5">
+						<div class="imatgepreviewformat-javascript">
 									<div id="previsualitzacio-formatbutlleti-1"></div>
 									<div id="previsualitzacio-formatbutlleti-2"></div>			
-								</div>
-				</div>
+						</div>
+					</div>
+
+					</div>
+					
+
 				
 			</div>  		
   	</div>
@@ -110,7 +151,7 @@
 									</div>
 								</div>
 
-			<textarea id="input_cos_es" name="input_cos_es" class="1columna" style="height: 120px;"></textarea>
+			<textarea id="input_cos_es" name="input_cos_es" class="1columna" style="height: 180px;"></textarea>
   		</div>
   		
   		<div class="col-md-6">
@@ -143,7 +184,7 @@
 									</div>
 								</div>
 			
-			<textarea id="input_cos_ca" name="input_cos_ca" class="1columna" style="height: 120px;"></textarea>
+			<textarea id="input_cos_ca" name="input_cos_ca" class="1columna" style="height: 180px;"></textarea>
   		</div>
 		</div>
 
@@ -152,8 +193,35 @@
   <br />
 	<button id="boto_enviar" type='submit' class='btn btn-secondary btn-sm btn-secondary' onmouseover="revisaDestinatari();">Enviar butlletí</button>
 	<button id="boto_previsualitzar" type='submit' class='btn btn-secondary btn-sm btn-secondary' formaction="/previsualitzar.php" onmouseover="revisaDestinatari();">Previsualitzar</button>
+	
+	<input class="checkbasedades" type="checkbox" value="desa" name="desa_a_la_base_de_dades" id="desa_a_la_base_de_dades"><label class="form-check-label" for="defaultCheck1"><strong>Desa</strong> el formulari a la base de dades</label>
 
 	</form>
+
+
+
+								<!-- Modal d'avís de que no has escrit cap destinatari-->
+								<div class="modal fade bannerformmoda2" tabindex="-1" role="dialog" aria-labelledby="sensedestinatari" aria-hidden="true" id="sensedestinatari">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">No hi ha cap destinatari? </h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												Hola! hem detectat que has oblidat afegir algun correu electrònic per al destinatari del formulari, aleshores no es pot enviar aquest butlletí.<br /><br />
+												És necessari que escrigues una adreça de correu electrònic, al menys. Afegeix-lo ara i torna a provar.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar finestra</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								
 
 </div></section>
 

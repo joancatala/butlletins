@@ -6,6 +6,7 @@
     <div class="container-fluid p-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        
         <div class="my-auto">
           <h1 class="mb-0"><?php echo nom_projecte[0]; ?>
             <span class="text-primary"><?php echo nom_projecte[1]; ?></span>

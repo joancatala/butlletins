@@ -19,7 +19,7 @@ $variable_id = $_GET["id"];
 	  	<h2 class="mb-5">Butlletí número <?php echo $variable_id; ?></h2>
 				
  <?php
-		$consulta1 = "SELECT id, data, destinatari, copia, assumpte, titol_es, cos_es, titol_ca, cos_ca FROM $taula WHERE id=$variable_id;";
+		$consulta1 = "SELECT id, data, destinatari, assumpte, titol_es, cos_es, titol_ca, cos_ca FROM $taula WHERE id=$variable_id;";
 		$resultat = mysqli_query($link, $consulta1); 
 				
 		while($row = mysqli_fetch_array($resultat))
@@ -28,15 +28,13 @@ $variable_id = $_GET["id"];
 					
 					
 									<div class="alert alert-secondary" role="alert">
-									Aquestes són les dues versions (castellà i valencià) del butlletí <?php echo $variable_id; ?>. Recorda que pots tornar enrere amb
+									Aquestes són les dues versions (castellà i valencià) del <i>butlletí <?php echo $variable_id; ?></i>. Torna enrere amb
 									la fletxa del navegador o <a class="enlac-gris" href="./llistat-de-butlletins.php">fer click ací</a> per anar al llistat global de butlletins.<br /><br />
 									
-									<strong>Destinatari:</strong> <?php echo $row["destinatari"] . '<br />'; ?>
-									<strong>Còpia:</strong> <?php echo $row["copia"] . '<br />'; ?> 
 									<strong>Assumpte: </strong> <?php echo $row["assumpte"] . '<br />'; ?> 
 									</div>
 				
-								<p></p>
+								<p>&nbsp;</p>
 				
 					
     	  <div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -60,36 +58,7 @@ $variable_id = $_GET["id"];
       mysqli_close($link);
       ?>
 						
-	
-     
-        
       </div></section>
 
 		<!-- Peu de la web -->		
 		<?php include "vendor/inc/peu.inc"; ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

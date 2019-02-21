@@ -62,7 +62,8 @@ input, textarea {text-decoration: none;}
 
 button.botoinfo {background-color: #ccc; color: #000; border-color: #ccc; font-size: 9px; }
 button.botoinfo:hover {background-color: #a81d37; border-color: #a81d37;}
-input.botoenviar {font-weight: bold; margin-top: 10px; font-size: 18px; } 
+input.botoenviar {font-weight: bold; margin-top: 10px; font-size: 18px; }
+input.checkbasedades {margin-left: 10px; width: 40px; }
 
 /* Previsualització dels formats 1 o 2 columnes */
 #previsualitzacio-formatbutlleti-1
@@ -80,6 +81,9 @@ input.botoenviar {font-weight: bold; margin-top: 10px; font-size: 18px; }
    width:220px;
  	 background-image:  url("/img/newsletter-format-2-columnes.png");
 }
+
+
+#previsualitzacio-formatbutlleti-1, #previsualitzacio-formatbutlleti-2  {position: relative; left: 60px; }
 
 /* Previsualització dels formats de la capçalera segons la categoria */
 
@@ -123,9 +127,20 @@ input.botoenviar {font-weight: bold; margin-top: 10px; font-size: 18px; }
  	 background-image:  url("/img/preview-newsletter-pmh.png");
 }
 
+#previsualitzacio-categoriabutlleti-6
+{
+   display: none;
+   height:150px;
+   width:220px;
+ 	 background-image:  url("/img/preview-newsletter-gobiernoabierto.png");
+}
+
+
 .radio-toolbar input[type="radio"] {width: 50px; }
-.imatgepreviewcategoria-javascript {margin-left: 30px; }
-.imatgepreviewformat-javascript {margin-left: 70px; }
+.radio-toolbar2 input[type="radio"] {width: 50px; }
+.imatgepreviewcategoria-javascript {margin-left: 30px;  }
+.imatgepreviewformat-javascript { margin-left: 30px; }
+#grup-categoria {width: 200px;}
 
 /* Enllaços de color gris (per a la pàgina butlleti.php, a la part superior ) */
 a.enlac-gris {color:#868e96; text-decoration: underline;}
@@ -151,4 +166,5 @@ a.enlac-gris {color:#868e96; text-decoration: underline;}
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
+
 

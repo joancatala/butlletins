@@ -19,7 +19,10 @@ define('clausules_rgpd', "<p class=\"informacio-peu\">Este correo está enmarcad
 						Delegat de Protecció de Dades de la Diputació i de les EELL de la província la població de la qual no supera els 20.000 habitants. Entre altres funcions, el
 						Delegat de Protecció de Dades promourà la implantació de programes de formació i sensibilització del personal en matèria de protecció de dades. En concret,
 						l&apos;art. 39 del RGPD, destaca com una de les funcions del Delegat de Protecció de Dades, la d&apos;<i>\"informar i assessorar el responsable o encarregat del tractament i als
-						empleats que s&apos;ocupen del tractament de les obligacions que els incumbeixen en virtut del present Reglament\".</i></p>")
+						empleats que s&apos;ocupen del tractament de les obligacions que els incumbeixen en virtut del present Reglament\".</i></p>");
+
+define('peu_estandard', "<font size=\"2\">Desde el Servicio Provincial de Asistencia a Municipios (SEPAM) de la Diputación de Castellón te mandamos este boletín para que estés informado sobre aspectos de interés relacionados
+       con aquellos proyectos en los que tu Entidad Local está adherida. Por favor, haz extensible esta comunicación al personal de tu Entidad si consideras que es de su interés.</font>");                      
 
 // fi de la configuració
 ?>

@@ -64,7 +64,7 @@ $variable_cos_ca = $_POST["input_cos_ca"];
 					<?php if (($variable_categoria=='categoria2')) {  ?>
 					<table class="taula"><td>
 					<img class="fluida" src="https://sepam.dipcas.es/cap-2.png">
-					<div class="subtitolet2">Servei Provincial d'Assesorament a Municipis - SEPAM</div><br />
+					<div class="subtitolet2">Servei Provincial d'Assistència a Municipis - SEPAM</div><br />
 					</td></table>				
 					<?php }   ?>
 					
@@ -87,7 +87,14 @@ $variable_cos_ca = $_POST["input_cos_ca"];
 					<img class="fluida" src="https://sepam.dipcas.es/cap-5.png">
 					<div class="subtitolet3">Padró Municipal de la província de Castelló</div><br />
 					</td></table>				
-					<?php }   ?>					
+					<?php }   ?>
+					
+					<?php if (($variable_categoria=='categoria6')) {  ?>
+					<table class="taula"><td>
+					<img class="fluida" src="https://sepam.dipcas.es/cap-6.png">
+					<div class="subtitolet3">Gobierno Abierto - Diputació de Castelló</div><br />
+					</td></table>				
+					<?php }   ?>								
 
 
 
@@ -129,18 +136,32 @@ if (($variable_formato=='format1')) {
 							<a href="https://twitter.com/dipcas" target="_blank"><img class="icon_social" src="http://sepam.dipcas.es/files/boletin-twitter.png" /></a>
 							<a href="https://www.youtube.com/user/prensadipcas" target="_blank"><img class="icon_social" src="http://sepam.dipcas.es/files/boletin-youtube.png" /></a>
 							<a href="https://www.flickr.com/photos/diputacion/" target="_blank"><img class="icon_social" src="http://sepam.dipcas.es/files/boletin-flickr.png" /></a>
+							
+							<p class="informacio-peu">Este correo está enmarcado dentro de las funciones llevadas a cabo por la Oficina Provincial de Protección de Datos y Seguridad de la Diputación de Castellón,
+							en calidad de Delegado de Protección de Datos de la Diputación y de las EELL de la provincia cuya población no supera los 20.000 habitantes. Entre otras funciones,
+							el Delegado de Protección de Datos promoverá la implantación de programas de formación y sensibilización del personal en materia de protección de datos. En concreto,
+							el art. 39 del RGPD, destaca como una de las funciones del Delegado de Protección de Datos, la de <i>"informar y asesorar al responsable o encargado del tratamiento y a los
+							empleados que se ocupen del tratamiento de las obligaciones que les incumben en virtud del presente Reglamento".</i></p>
+									
+							<p class="informacio-peu">Aquest correu està emmarcat dins de les funcions dutes a terme per l&apos;Oficina Provincial de Protecció de Dades i Seguretat de la Diputació de Castelló, en qualitat de
+							Delegat de Protecció de Dades de la Diputació i de les EELL de la província la població de la qual no supera els 20.000 habitants. Entre altres funcions, el
+							Delegat de Protecció de Dades promourà la implantació de programes de formació i sensibilització del personal en matèria de protecció de dades. En concret,
+							l&apos;art. 39 del RGPD, destaca com una de les funcions del Delegat de Protecció de Dades, la d&apos;<i>"informar i assessorar el responsable o encarregat del tractament i als
+							empleats que s&apos;ocupen del tractament de les obligacions que els incumbeixen en virtut del present Reglament".</i></p>
+
 <?php } ?>
 
 
 <?php if (($variable_categoria=='categoria2')) { ?>
 							<table class="taula-esquerra"><td>
-							<a href='http://sepam.dipcas.es'>Assitència tècnica a municipis (SEPAM)</a> - <a href='http://www.dipcas.es'>Diputació de Castelló</a>		
+							<p><font size=\"2\">Desde el Servicio Provincial de Asistencia a Municipios (SEPAM) te mandamos este boletín para que estés informado sobre aspectos de interés relacionados con aquellos proyectos en los que tu Entidad está adherida. Por favor, haz extensible esta comunicación al personal de tu Entidad si consideras que es de su interés.</font></p>
+							<a href='http://sepam.dipcas.es'>Servei Provincial d'Assistència a Municipis (SEPAM)</a> - <a href='http://www.dipcas.es'>Diputació de Castelló</a>				
 <?php } ?>
 
 
 <?php if (($variable_categoria=='categoria3')) { ?>
 							<table class="taula-esquerra"><td>
-							<a href='http://projectewebmunicipal.dipcas.es'>PROJECTE WEB MUNICIPAL</a> - <a href='http://sepam.dipcas.es'>Assesorament Tècnic a Municipis (SEPAM)</a>		
+							<a href='http://projectewebmunicipal.dipcas.es'>PROJECTE WEB MUNICIPAL</a> - <a href='http://sepam.dipcas.es'>Servei Provincial d'Assistència a Municipis (SEPAM)</a>		
 <?php } ?>
 
 
@@ -152,23 +173,14 @@ if (($variable_formato=='format1')) {
 
 <?php if (($variable_categoria=='categoria5')) { ?>
 							<table class="taula-esquerra"><td>
-							<a href='http://sepam.dipcas.es'>Assitència tècnica a municipis (SEPAM)</a> - <a href='http://www.dipcas.es'>Diputació de Castelló</a>
+							<a href='http://sepam.dipcas.es'>Servei Provincial d'Assistència a Municipis (SEPAM)</a> - <a href='http://www.dipcas.es'>Diputació de Castelló</a>
 <?php } ?>
-					
-													
-													
-<p class="informacio-peu">Este correo está enmarcado dentro de las funciones llevadas a cabo por la Oficina Provincial de Protección de Datos y Seguridad de la Diputación de Castellón,
-en calidad de Delegado de Protección de Datos de la Diputación y de las EELL de la provincia cuya población no supera los 20.000 habitantes. Entre otras funciones,
-el Delegado de Protección de Datos promoverá la implantación de programas de formación y sensibilización del personal en materia de protección de datos. En concreto,
-el art. 39 del RGPD, destaca como una de las funciones del Delegado de Protección de Datos, la de <i>"informar y asesorar al responsable o encargado del tratamiento y a los
-empleados que se ocupen del tratamiento de las obligaciones que les incumben en virtud del presente Reglamento".</i></p>
-		
-<p class="informacio-peu">Aquest correu està emmarcat dins de les funcions dutes a terme per l&apos;Oficina Provincial de Protecció de Dades i Seguretat de la Diputació de Castelló, en qualitat de
-Delegat de Protecció de Dades de la Diputació i de les EELL de la província la població de la qual no supera els 20.000 habitants. Entre altres funcions, el
-Delegat de Protecció de Dades promourà la implantació de programes de formació i sensibilització del personal en matèria de protecció de dades. En concret,
-l&apos;art. 39 del RGPD, destaca com una de les funcions del Delegat de Protecció de Dades, la d&apos;<i>"informar i assessorar el responsable o encarregat del tractament i als
-empleats que s&apos;ocupen del tractament de les obligacions que els incumbeixen en virtut del present Reglament".</i></p>
 
+
+<?php if (($variable_categoria=='categoria6')) { ?>
+							<table class="taula-esquerra"><td>
+							<a href='http://gobiernoabierto.dipcas.es'>Gobierno Abierto</a> -  <a href='http://www.dipcas.es'>Diputació de Castelló</a>
+<?php } ?>
 </td></table>
 
 

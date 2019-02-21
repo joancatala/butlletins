@@ -37,18 +37,49 @@ window.onload = CBcategoria();
 
        <form id="form_42394" class="appnitro" method="post" action="./envia.php">
 	
-      <div class="row filaformulari">
-       <div class="col-md-6">
-        <div class="ambfons">DADES PRINCIPALS DEL BUTLLETÍ</div><br />
-        <span class="labels-mes-menuts">Destinatari:</span> <input type="text" class="form-control" id="input_destinatari" name="input_destinatari" value="<?php echo $row["destinatari"]; ?>"><br />
-        <span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" value="<?php echo $row["assumpte"]; ?>"></div>
-      
-       <div class="col-md-6">
-        <div class="ambfons">REENVIAMENT DEL BUTLLETÍ</div><br />
-        <span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia" value="<?php echo $row["copia"]; ?>"><br />
-        <span class="labels-mes-menuts">Còpia oculta (BCC):</span> <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta">
-      </div>
-      </div>
+	<div class="row filaformulari">
+  <div class="col-md-6">
+			<div class="ambfons">DESTINATARIS DEL BUTLLETÍ</div><br />
+			<span class="labels-mes-menuts">Destinatari:
+   
+			<!-- Button trigger modal -->
+								<a href="#bannerformmoda2" data-toggle="modal" data-target="#bannerformmodaladreces">(Informació d'ajuda)</a></span>
+   
+								<!-- Modal -->
+								<div class="modal fade bannerformmoda2" tabindex="-1" role="dialog" aria-labelledby="bannerformmodaladreces" aria-hidden="true" id="bannerformmodaladreces">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Envia el butlletí a moltes adreces de correu</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<p>Si vols enviar un butlletí massiu que arribe a molts destinataris, escriu les adreces de correu electrònic separades separades amb comes (<strong>,</strong>) o punt i coma (<strong>;</strong>). </p>
+												Per exemple:<br /><br />
+												<i>-correu1@u<strong>,</strong> correu2@dos<strong>,</strong> correu3@tres<strong>,</strong> etc...</i><br />
+												<i>-correu1@u<strong>;</strong> correu2@dos<strong>;</strong> correu3@tres<strong>;</strong> etc...</i><br /><br />
+												
+											</div>
+										</div>
+									</div>
+								</div>
+        
+        
+   <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta">
+	</div>
+	
+ 
+ 
+ 
+  <div class="col-md-6">
+			<div class="ambfons">ASSUMPTE DEL BUTLLETÍ</div><br />
+			<span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" value="[Boletín/Butlletí] ...">
+			<!-- <span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia"><br /> --> 
+			<!-- <span class="labels-mes-menuts">Còpia oculta (BCC):</span> <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta"> -->
+	</div>
+	</div>
 	
 	<br /><br />
 	
@@ -93,6 +124,13 @@ window.onload = CBcategoria();
            <?php } else { ?>
 									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria2" onClick="CBcategoria(this.value);" />SEPAM</label><br />
            <?php } ?>                 
+
+           <?php if (($variable_categoria=='categoria6')) { ?>
+									<label class="labels-mes-menuts"><input type="radio"  checked="checked" name="categoria" value="categoria6" onchange="CBcategoria(this.value);" onClick="CBcategoria(this.value);" />Gobierno Abierto</label><br />
+           <?php } else { ?>
+									<label class="labels-mes-menuts"><input type="radio"  name="categoria" value="categoria6" onClick="CBcategoria(this.value);" />Gobierno Abierto</label><br />
+           <?php } ?>
+           
            
 							</fieldset>
 							</div>
@@ -102,6 +140,7 @@ window.onload = CBcategoria();
 									<div id="previsualitzacio-categoriabutlleti-3"></div>
 									<div id="previsualitzacio-categoriabutlleti-4"></div>
          <div id="previsualitzacio-categoriabutlleti-5"></div>
+         <div id="previsualitzacio-categoriabutlleti-6"></div>
 								</div>
 		</div>
 		
@@ -214,6 +253,32 @@ window.onload = CBcategoria();
 	<button id="boto_previsualitzar" type='submit' class='btn btn-secondary btn-sm btn-secondary' formaction="/previsualitzar.php" onmouseover="revisaDestinatari();">Previsualitzar</button>
 
 	</form>
+       
+       
+       
+       
+								<!-- Modal d'avís de que no has escrit cap destinatari-->
+								<div class="modal fade bannerformmoda2" tabindex="-1" role="dialog" aria-labelledby="sensedestinatari" aria-hidden="true" id="sensedestinatari">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">No hi ha cap destinatari? </h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												Hola! hem detectat que has oblidat afegir algun correu electrònic per al destinatari del formulari, aleshores no es pot enviar aquest butlletí.<br /><br />
+												És necessari que escrigues una adreça de correu electrònic, al menys. Afegeix-lo ara i torna a provar.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar finestra</button>
+											</div>
+										</div>
+									</div>
+								</div>
+        
+        
        
  </div></section>
 
