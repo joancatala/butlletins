@@ -1,20 +1,19 @@
 # butlletins Newsletters Senzills
 
-Continuant amb l'aplicació web de Newsletters Senzills, que ja vaig comentar ací a la meua web quan vaig fer la versió 1.0, ara ja es pot presentar la versió 1.2, on té un disseny millorat (100% responsive + HTML5 + CSS3 + Bootstrap).
+Newsletters Senzills es va crear amb la idea de poder enviar correus informatius atractius però senzills i amb poc de text, com una píndola informativa per a usuaris d'un projecte de la Diputació de Castelló.
 
-Ara el formulari d'inserció de les dades està millor, on podem seleccionar si volem enviar un butlletí en format d'una o dues columnes, pensat sobretot per a enviar butlletins bilingües, castellà i valencià.
+Però l'objectiu no és que siga una aplicació multiusuari on es puguen enviar cada dia a milers d'usuaris. Per a fer açò hi ha utilitats comercials com MailChimp i moltes altres que et permeten enviar correus a molts usuaris amb plantilles personalitzades on, fins i tot, ofereixen serveis comercials - de pagament - amb moltes més funcionalitats que tal vegada siguen del teu interés.
 
-He afegit totes les rutes absolutes i molts includes de les distintes seccions, per a minimitzar la llargària de les pàgines i tenir-ho tot més ordenat i comprensible per a modificacions.
 
-Des de la versió 1.2, totes les dades es enmagatzemen a una base de dades MySQL/MariaDB de tal manera que una vegada hem enviat un butlletí a una o certes persones, el tindrem sempre arxivat, i podrem obrir-lo o, si volem, recuperar-lo i tornar-lo a enviar a un nou usuari. Des del llistat de butlletins podem buscar ja que hi ha un cercador ajax del bootstrap que ens permet fer cerques ràpides sense necessitat d'actualitzar la pàgina.
+![Formulari d'inserció de les dades](http://joancatala.net/sites/default/files/2019-02/1formulari_0.png)
 
-![Portada](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-1.png)
+![Missatges modals](http://joancatala.net/sites/default/files/2019-02/2javascriptambmodals_0.png)
 
-![Formulari d'inserció de les dades](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-2.png)
+![Missatges modals per si vols esborrar butlletins (fa falta contrasenya)](http://joancatala.net/sites/default/files/2019-02/3passwordesborrar_0.png)
 
-![Últims butlletins publicats](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-3.png)
+![Estadístiques globals](http://joancatala.net/sites/default/files/2019-02/4estadistiques_0.png)
 
-![Llistat de butlletins](https://github.com/joancatala/butlletins/blob/master/newsletters-senzills-4.png)
+![Pàgina d'ajuda](http://joancatala.net/sites/default/files/2019-02/5ajuda_0.png)
 
 Els requisits per a fer servir Newsletters Senzills són simplement un servidor web (Nginx en el meu cas), PHP i tots els mòduls de MySQL (recomanable versions superiors a la 7, la versió 7.1 en el cas del meu servidor) i una base de dades MySQL/MariaDB.
 
