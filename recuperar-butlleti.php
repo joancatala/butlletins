@@ -75,7 +75,7 @@ window.onload = CBcategoria();
  
   <div class="col-md-6">
 			<div class="ambfons">ASSUMPTE DEL BUTLLETÍ</div><br />
-			<span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" value="[Boletín/Butlletí] ...">
+			<span class="labels-mes-menuts">Assumpte:</span> <input type="text" class="form-control" id="input_assumpte" name="input_assumpte" onClick="esborraCampAssumpte();" value="[Boletín/Butlletí] ...">
 			<!-- <span class="labels-mes-menuts">Còpia (CC):</span> <input type="text" class="form-control" id="input_copia" name="input_copia"><br /> --> 
 			<!-- <span class="labels-mes-menuts">Còpia oculta (BCC):</span> <input type="text" class="form-control" id="input_copiaoculta" name="input_copiaoculta"> -->
 	</div>
@@ -251,6 +251,8 @@ window.onload = CBcategoria();
 	<!-- antic botó <input id="saveForm" class="button_text botoenviar" type="submit" name="submit" value="Enviar butlletí" /> -->
   <br /><button id="boto_enviar" type='submit' class='btn btn-secondary btn-sm btn-secondary' onmouseover="revisaDestinatari();">Enviar butlletí</button>
 	<button id="boto_previsualitzar" type='submit' class='btn btn-secondary btn-sm btn-secondary' formaction="/previsualitzar.php" onmouseover="revisaDestinatari();">Previsualitzar</button>
+
+	<input class="checkbasedades" type="checkbox" value="desa" name="desa_a_la_base_de_dades" id="desa_a_la_base_de_dades"><label class="form-check-label" for="defaultCheck1"><strong>Desa</strong> el formulari a la base de dades</label>
 
 	</form>
        

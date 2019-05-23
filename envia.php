@@ -273,6 +273,7 @@ $message = "<html lang=\"es\">\r\n<head>\r\n".
 						
 					if (($variable_categoria=='categoria6')) {
 						$message .= "<table class=\"taula-esquerra\"><td>" . "\r\n";
+						$message .= peu_gobierno_abierto;
 						$message .="<br /><br /><a href=\"http://gobiernoabierto.dipcas.es\">Gobierno Abierto</a> - <a href=\"http://www.dipcas.es\">Diputació de Castelló</a>\r\n";					
 					}								
 						
@@ -341,8 +342,8 @@ $message = "<html lang=\"es\">\r\n<head>\r\n".
 						}
 						
 						if (($variable_categoria=='categoria6')) {
-						$cabeceras .= "From: no_respondas@dipcas.es" . "\r\n" .
-									  "Reply-To: no_respondas@dipcas.es" . "\r\n" .
+						$cabeceras .= "From: bcolon@dipcas.es" . "\r\n" .
+									  "Reply-To: bcolon@dipcas.es" . "\r\n" .
 									  "Cc: " . $variable_copia . "\r\n".
 									  "Bcc: " . $variable_copiaoculta . "\r\n";
 									  "X-Mailer: PHP/" . phpversion();

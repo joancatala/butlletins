@@ -24,5 +24,8 @@ define('clausules_rgpd', "<p class=\"informacio-peu\">Este correo está enmarcad
 define('peu_estandard', "<font size=\"2\">Desde el Servicio Provincial de Asistencia a Municipios (SEPAM) de la Diputación de Castellón te mandamos este boletín para que estés informado sobre aspectos de interés relacionados
        con aquellos proyectos en los que tu Entidad Local está adherida. Por favor, haz extensible esta comunicación al personal de tu Entidad si consideras que es de su interés.</font>");                      
 
+define('peu_gobierno_abierto', "En la Diputación provincial de Castellón creemos en un modelo de gobierno abierto que promueva la transparencia, la participación,
+       la colaboración y la rendición de cuentas como elementos consustanciales a la acción pública.");
+
 // fi de la configuració
 ?>

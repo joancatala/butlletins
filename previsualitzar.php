@@ -179,7 +179,8 @@ if (($variable_formato=='format1')) {
 
 <?php if (($variable_categoria=='categoria6')) { ?>
 							<table class="taula-esquerra"><td>
-							<a href='http://gobiernoabierto.dipcas.es'>Gobierno Abierto</a> -  <a href='http://www.dipcas.es'>Diputació de Castelló</a>
+							<?php echo peu_gobierno_abierto; ?>
+							<br /><br /><a href='http://gobiernoabierto.dipcas.es'>Gobierno Abierto</a> -  <a href='http://www.dipcas.es'>Diputació de Castelló</a>
 <?php } ?>
 </td></table>
 
